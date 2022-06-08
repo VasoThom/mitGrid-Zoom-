@@ -1,0 +1,142 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  background-color: rgb(51, 51, 51);
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  height: 100vh;
+  width: 100%;
+}
+.head {
+  position: fixed;
+  font-size: 35px;
+  color: white;
+  background-color: rgb(43, 43, 43);
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  z-index: 1;
+  padding: 25px;
+}
+.container {
+  justify-content: center;
+  padding: 20px;
+  width: 100%;
+  position: relative;
+  gap: 10px;
+  top: 100px;
+  padding-bottom: 150px;
+}
+
+img {
+  width: 100%;
+  border-radius: 20px;
+  aspect-ratio: 16/9;
+  object-fit: cover;
+}
+.container div {
+  position: relative;
+}
+
+.container div::after {
+  content: "\f03d";
+  position: absolute;
+  bottom: 5%;
+  right: 5%;
+  font-size: 50px;
+  color: rgb(28, 162, 28);
+  font-family: FontAwesome;
+}
+.container div::before {
+  content: "";
+  position: absolute;
+  bottom: 5%;
+  left: 5%;
+  color: white;
+  background-color: rgba(79, 78, 78, 0.5);
+  padding: 15px;
+}
+.container div:first-child::before {
+  content: "DevStar";
+}
+.container div:nth-child(2)::before {
+  content: "Hacker7";
+}
+.container div:nth-child(3)::before {
+  content: "CSSPro";
+}
+.container div:nth-child(4)::before {
+  content: "HTML4Life";
+}
+.container div:nth-child(5)::before {
+  content: "DrWeb";
+}
+.container div:nth-child(6)::before {
+  content: "CodeNinja";
+}
+.container div:nth-child(7)::before {
+  content: "ITWiz";
+}
+.container div:nth-child(8)::before {
+  content: "StyleOne";
+}
+.container div:nth-child(9)::before {
+  content: "MsLinux";
+}
+@media (min-width: 450px) {
+  .container {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+  }
+}
+@media (min-width: 725px) {
+  .container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media (min-width: 960px) {
+  .container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+  }
+  .nav ul li {
+    font-size: 30px;
+  }
+
+  .head {
+    font-size: 50px;
+  }
+}
+
+.nav {
+  background-color: rgb(43, 43, 43);
+  position: fixed;
+  height: 120px;
+  bottom: 0px;
+  left: 0px;
+  right: 0px;
+  margin-bottom: 0px;
+  text-align: center;
+}
+.nav ul {
+  padding: 30px;
+  justify-content: space-around;
+  display: flex;
+  font-size: 15px;
+  list-style: none;
+  color: white;
+}
+button {
+  background-color: red;
+  color: white;
+  padding: 1rem 3rem;
+  border: none;
+  border-radius: 8px;
+  font-size: 15px;
+  cursor: pointer;
+}
